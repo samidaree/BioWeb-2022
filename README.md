@@ -1,18 +1,18 @@
-## Getting Started
+###BioWeb 
+Cette application web réalise, les alignements global et multiple entre 2 et plus séquences de protéines ou d'ADN. Dans le cas des alignements multiples il est également possible de générer le weblogo. Il est possible de rentrer les séquences par saisie manuelle, séléction dans la base de données ou fichier. Il est possible d'ajouter des séquences dans la base de données grâce à leur identifiant.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Alignement global séquences protéiques
+![](Demos/AG_Prot.gif) 
 
-## Folder Structure
+## Alignement multiple séquences nucléotidiques
+![](Demos/AM_ADN.gif)
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Ajout de séquences dans la base de données
+![](Demos/AjoutSequenceBDD.gif)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Weblogo de l'alignement multiple de 5 séquences protéiques 
+![](Demos/WL_5sequencesProt.gif)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Weblogo de l'alignement de séquences d'ADN 
+![](Demos/WL_ADN.gif)
