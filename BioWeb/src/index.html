@@ -1,0 +1,109 @@
+<!DOCTYPE html>   
+  <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="style.css">
+            <title> BIOINFO </title>
+        </head>
+    <body>
+      
+     
+        <div class="InterfaceGraphique">
+            <div id="conteneur1">
+                <h1>BIOWEB  </h1>               
+            </div>
+         
+            <form method="POST" action="callJava.php" enctype="multipart/form-data" >
+                <fieldset>
+                    <legend>
+                        Étape 1 
+                    </legend>
+                    <label for ="saisie">Comment voulez-vous saisir les séquences ?</label>
+                    <select id="saisie" name="saisie" >
+                        <option value="" selected disabled hidden>Choisir une option</option>
+                        <option value ="manuelle">Saisie manuelle</option>
+                        <option value="fichier">Par fichier</option>
+                        <option value ="identifiant">Par identifiant</option>
+                    </select>
+                    <br> <br> 
+                    <label for =nature>Quel est la nature des séquences ? </label>
+                    <select id="nature" name = "nature" >
+                        <option value="" selected disabled hidden>Choisir une option</option>
+                        <option value = "adn">ADN</option>
+                        <option value = "protein">Protéines</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Étape 2</legend>
+                    <div id="conteneur2">
+
+                            <textarea cols="160" rows = "10" name="EntrerSequence" id="EntrerSequence" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'  placeholder ="Veuillez entrer les séquences séparées par un retour à la ligne" ></textarea>
+                            <p>Ou choisissez un fichier : 
+                            <input type="file" name="fichierFasta" id="fichier" class="upload-box"> 
+                        </p>
+                        <p> Ou bien choisissez des identifiants : </p>
+                            <select multiple id ="identifiant" name="identifiant[]">
+                                <option value ="none" selected disabled hidden> Choisir </option>
+                                IDENTIFIANT
+                                                   
+                            </select>
+                                <p> 
+                                    Vous pouvez également ajouter une séquence protéique à la liste ci-dessus en entrant son identifiant : 
+                                </p>
+                                <input type="text" name="identifiantbdd" id="identifiantbdd" > 
+                                <input type= "submit" name="soumettreid" value ="Valider" id="soumettreid">                    
+                    </div>        
+                   
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Étape 3</legend>
+                    <div id="conteneur3">
+                        <div id="alignement">
+                            <div id="matrice"> 
+                                <input type="checkbox" name = "matrice" id="matrice">
+                                <label for ="matrice">Afficher la matrice de similarité</label>
+                            </div>
+                            <input name = "alignement" type ="submit" value ="Alignement Global" >
+                            <input name = "alignement" type ="submit" value ="Alignement Multiple" >
+                            <input  name = "alignement" type ="submit" value = "Weblogo"> 
+                           
+                        </div>
+                        
+                        <div id="MatchMismatchGap">
+                            <p>
+                                Match
+                            </p>
+                            <div class="containerButton">
+                                <button type ="button" id ="decrementeMatch" onclick="stepperMatch(this)"> - </button>
+                                <input type="number" id ="match" max = '10' min = '-5'  name="match" value=""  >
+                                <button type ="button" id ="incrementeMatch" onclick="stepperMatch(this)"> + </button>
+                            </div>
+                            <p>
+                                Mismatch
+                            </p> 
+                            <div class="containerButton">
+                           
+                            <button type ="button"  id ="decrementeMis" onClick="stepperMis(this)" > - </button>
+                            <input type="number" id="mismatch" max = '5' min = '-10'  name ="mismatch" value ="" >
+                            <button type ="button"  id ="incrementeMis" onclick="stepperMis(this)"> + </button>
+                        </div>
+                        <p>
+                            Gap 
+                        </p>
+                            <div class="containerButton">
+                                <button type ="button" id ="decrementeGap" onClick="stepperGap(this)"> - </button>
+                                <input type ="number" id="gap" max = '5' min = '-10'  name="gap"  value ="" >
+                                <button type ="button" id ="incrementeGap" onClick="stepperGap(this)"> + </button>
+                           </div>
+                        </div>
+                    </div>
+                </fieldset>
+    
+            </form>
+            
+            </div>
+        </div>
+        <script src ="index.js"></script>
+    </body>
+<html>
