@@ -1,6 +1,7 @@
 # BioWeb 
 Cette application web réalise, les alignements global et multiple entre 2 et plus séquences de protéines ou d'ADN. Dans le cas des alignements multiples il est également possible de générer le weblogo. Il est possible de rentrer les séquences par saisie manuelle, séléction dans la base de données ou fichier. Il est possible d'ajouter des séquences dans la base de données grâce à leur identifiant.
 
+Sami Boufassa, Max Maiche, Arthur Sani Bouaki, Adrien Soleau
 ## Alignement global séquences protéiques
 ![](Demos/AG_Prot.gif) 
 
